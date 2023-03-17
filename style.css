@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
-@import url(https://fonts.googleapis.com/css?family=Josefin+Sans:100,200,300,regular,500,600,700,100italic,200italic,300italic,italic,500italic,600italic,700italic);
+@import url(https://fonts.googleapis.com/css?family=Questrial:regular);
+@import url(https://fonts.googleapis.com/css?family=Beth+Ellen:regular);
 
 * {
 	padding: 0;
@@ -9,29 +9,70 @@
 
 body {
 	background-image: url(./assets/tent_bg_two.jpg);
-	font-family: 'Josefin Sans', sans-serif;
+	font-family: 'Questrial', sans-serif;
 	animation: move 16s ease infinite;
 	height: 100vh;
 	color: white;
-}
-
-div {
-	height: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: start;
-	padding: 0 4rem;
+}
+
+.title {
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 1rem 4rem;
 }
 
 h1 {
 	font-size: 4rem;
-	font-family: 'Montserrat', sans-serif;
 }
 
 h3 {
-	font-weight: 200;
-	text-align: start;
+	color: rgb(255, 255, 255);
+	font-weight: 300;
+	font-family: 'Beth Ellen', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.fa-whatsapp {
+	color: greenyellow;
+	margin-left: 5px;
+}
+
+.info {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	background-color: rgba(87, 8, 8, 0.2);
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2%;
+}
+
+.details {
+	display: flex;
+	flex: 1;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+a:hover {
+	color: green;
+}
+
+p>span {
+	font-weight: bolder;
 }
 
 @keyframes move {
@@ -49,14 +90,38 @@ h3 {
 }
 
 /* @media (max-width:) {} */
+@media (max-width:1200px) {
+	.info {
+		font-size: 16px;
+	}
+}
+
+@media (max-width:1100px) {
+	.info {
+		font-size: 14px;
+	}
+
+	.details {
+		flex-direction: column;
+		align-items: flex-end;
+		gap: 5px;
+	}
+}
+
 @media (max-width:950px) {
 	h1 {
 		font-size: 3rem;
 		margin-bottom: 1rem;
 	}
-	
+
 	h3 {
 		font-size: 1rem;
+	}
+}
+
+@media (max-width:900px) {
+	.info {
+		font-size: 12px;
 	}
 }
 
@@ -64,10 +129,20 @@ h3 {
 	h1 {
 		font-size: 2.5rem;
 	}
+	.info {
+		font-size: 10.5px;
+	}
+	.details{
+		gap: 12px;
+	}
 }
+
 
 @media (max-width:420px) {
 	h1 {
-		font-size: 1.5rem;
+		font-size: 1.8rem;
+	}
+	h3{
+		font-size: 0.8rem;
 	}
 }
