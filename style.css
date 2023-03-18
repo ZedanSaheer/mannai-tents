@@ -132,8 +132,16 @@ p>span {
 	.info {
 		font-size: 10.5px;
 	}
+	.info > p {
+		display: none;
+	}
 	.details{
 		gap: 12px;
+		justify-content: center;
+		align-items: center;
+	}
+	.details > p {
+		display: none;
 	}
 }
 
